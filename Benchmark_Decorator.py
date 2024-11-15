@@ -10,15 +10,3 @@ def benchmark(func):
         return f'Время выполнения функции {func.__name__} потребовалось {end - start:.15f}'
     return wrapper
 
-
-#Testing the decorator
-
-@benchmark
-def fibonacci(n):
-    if n == 1:
-        return n
-    else:
-        return fibonacci(n - 1)
-
-
-print(fibonacci(100))
