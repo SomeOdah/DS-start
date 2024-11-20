@@ -7,6 +7,6 @@ def benchmark(func):
         start = time.perf_counter()
         func(*args, **kwargs)
         end = time.perf_counter()
-        return f'Время выполнения функции {func.__name__} потребовалось {end - start:.15f}'
+        print(f'Время выполнения функции {func.__name__}: {end - start:.15f} секунд')
+        return func(*args, **kwargs)
     return wrapper
-

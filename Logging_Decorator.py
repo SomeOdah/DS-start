@@ -3,6 +3,7 @@
 
 def logging(func):
     def wrapper(*args, **kwargs):
-        return f'Функция вызвана с параметрами:\n{args, kwargs}'
+        print(f'Функция вызвана с параметрами:\n{args, kwargs}')
+        return func(*args, **kwargs)
     return wrapper
 
